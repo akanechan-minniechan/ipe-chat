@@ -1,3 +1,4 @@
+#問３ 商品レビュー
 
 def register_student(students)
     puts "商品名を入力してください"
@@ -40,3 +41,36 @@ while true do
         exit
     end
 end
+
+#問2 アホになるやつ
+
+(1..50).each do |num|
+    if num % 3 == 0
+      puts "aho"
+    elsif k.to_s.include?("3")
+      puts "aho"
+    else
+      puts "#{num}"
+    end
+  end
+
+  #1 数当てゲーム
+
+  result = rand(0..9)
+input = 0
+
+loop do
+    puts "入力をお願いします。"
+
+    input = gets.to_i
+
+    if input > result
+        puts "もっと小さいです。"
+    elsif input < result
+        puts "もっと大きいです。"
+    else
+        break
+    end
+end
+
+puts "正解です。"
