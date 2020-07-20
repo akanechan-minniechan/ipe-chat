@@ -1,61 +1,42 @@
-#問３　商品レビュー
-class review
-def register_review   # レビューを登録するメソッドを完成させてください。引数も利用しましょう。
-    puts = "商品名を入力してください"
-    post[:name] = gets.chomp
+
+def register_student(students)
+    puts "商品名を入力してください"
+    input_name = gets.chomp
     puts "感想を入力してください"
-    post[:review] = gets.chomp
+    input_japanese = gets.chomp
+
+    student = { name: input_name, japanese: input_japanese}
+    students << student
+    puts "登録しました！"
 end
 
-def show_reviews
-    name = ["商品名"]
+def show_students(students)
+    students.each_with_index do |student, index|
+        puts "----------------------------"
+        puts "[#{ index + 1 }]商品名： #{ student[:name] }"
+        puts "[#{ index + 1 }]感想： #{ student[:japanese] }"
+    end 
+    input = gets.to_s
 
-    name.each do |name|
-    puts name
-    puts "商品名：【ユーザーが入力した商品名をここに表示】"
-    puts "感想：【ユーザーが入力した感想をここに表示】"
 end
 
-reviews = ["感想"]
+
+students = []
 while true do
     puts "番号を入力してください"
     puts "[1] レビューを登録する"
     puts "[2] レビューの一覧を見る"
     puts "[3] アプリを終了する。"
     input = gets.to_i
+
     case input
     when 1
-        # レビューを登録するメソッドを呼び出してください
-        post[:review] = gets.chomp
+        # 生徒を登録する処理
+        register_student(students)
     when 2
-        # レビュー一覧を表示するメソッドを呼び出してください
-
+        # 生徒の一覧を表示する処理
+        show_students(students)
     when 3
-        # アプリケーションを終了する処理を書いてください
+        exit
     end
-end
-
-
-#問２アホになるやつ
-num = 1
-while num <= 50
-    puts num
-    if num * 3 == 0
-        put Aho
-end
-
-
-
-#問１数当てゲーム
-num = 0
-while num <= 9
-    puts num
-end
-userInput = ユーザーが入力する値r = puts Random.rand(0..9)
-if userInput = r then
-    put "正解"
-elsif userInput > r then
-    put "大きい"
-else
-    puts "小さい"
 end
