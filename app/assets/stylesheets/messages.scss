@@ -1,3 +1,104 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./color";
+
+.main {
+    height: calc(100vh - 80px);
+    .chat {
+        padding: 0 20px;
+        height: calc(100vh - 160px);
+        background-color: #FFDDFF;   
+        
+        div {
+        max-height: calc(100vh - 170px);
+        overflow-y: auto;    
+        .chat2 {
+            padding: 0.9px;
+            background-color: #FFEEFF;
+            margin-top: 30px;
+            display: flex;
+        justify-content: space-between;
+
+
+
+            div {
+               
+                p {
+                    /* ユーザー名 */
+                    SPAN {/* 投稿日時 */
+
+                    }
+
+                }
+                p {/* 本文 */
+
+                }
+            
+            }
+            div {
+                ul {
+
+                    li {
+                
+                        
+                            margin: 0.4em;
+                            background-color: $sub-color;
+                            border-radius: 5px;    /* 角丸 */
+                          
+                            a {
+                                
+                                padding: .7em 2em;    /* 内側余白　.7em 2emは、上下・左右の順に指定 */
+                                color: $main-color;    /* フォントの色 */
+                                font-weight: bold;    /* フォントを太字 */
+                                text-decoration: none;    /* アンダーライン無効化 */
+                                width: 100%;    /* 横幅を親要素いっぱいに広げる */
+                                display: block;    /* インライン要素からブロック要素に変更。これにより、ボタン全体がリンクになる */
+                              }
+                            &:hover {
+                                opacity: 0.7;
+                                    }
+                            
+                        }
+                    }
+                    
+                
+                        
+                      
+                    
+                }
+
+        }
+        
+        } 
+    
+    }
+    .chat-form {
+        height: 80px;
+        padding: 20px;
+        background-color: 	#FFBBFF;
+        input[type="text"]{
+            width:70%
+        
+        }
+        input[type="submit"]{padding: .7em 0em;    /* 内側余白　.7em 2emは、上下・左右の順に指定 */
+            color: $main-color;    /* フォントの色 */
+            font-weight: bold;    /* フォントを太字 */
+            text-decoration: none;    /* アンダーライン無効化 */
+            width: 10%;    /* 横幅を親要素いっぱいに広げる */
+           
+        }
+        
+    }
+
+}
+    
+         
+
+
+         
+    
+   
+
+
+
+
+
