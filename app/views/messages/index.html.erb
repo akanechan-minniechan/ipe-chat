@@ -1,0 +1,48 @@
+<div class="main">
+    <div class="chat" id="chat-index">
+        <div class="chat-container"> 
+          <% unless @messages.blank? %>   
+            <% @messages.each do |message| %>
+            <div class="chat2">
+                <div class="message-left">
+                  <p class="message-info"> 
+                  ちゃちゃまる
+                   <SPAN>
+                  <%= message.created_at.strftime("%Y/%m/%d(%a) %H:%M") %>
+                   </SPAN>
+                  </p>
+                  <p class="message-content">
+                  <%= message.content %>
+                  </p>    
+                </div>
+                <div class="message-right">
+                 <ul>
+                  <li>
+                    <a href="#">edit</a>
+                  </li>
+                  <li>
+                    <a href="#">delete</a>
+                  </li>
+                 </ul>
+            
+                </div>
+            </div>
+            <% end %>
+
+               <% else %>
+               <div class="chat2">          
+                <p>No message yet.
+                </p>
+               </div>
+                 <% end %>
+            </div>
+        </div>     
+ 
+    <div class="chat-form">
+        <form>  
+            <input id="chat-form" type="text">
+            <input type="submit" value="SEND">
+        </form>
+    </div>
+</div>
+
