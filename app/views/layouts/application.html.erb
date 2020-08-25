@@ -9,24 +9,24 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-  <header>
-  <div>
+ <body>
+    <header>
+      <div class="top-icon">
         <a href="/">
-          <img src="/assets/logo_grey.png" alt="ipeロゴ">
+          <img src="/assets/logo_grey.png">
         </a>
       </div>
-       <ul>
+
+      <ul>
           <li><a href="#">SIGNUP</a></li>
           <li><a href="#">LOGIN</a></li>
           <li><a href="#">LOGOUT</a></li>
       </ul>
-  </header>
+    </header>
+    <% if notice %>
+      <p class="flash"><%= notice %></p>
+    <% end %>
 
-
-          
     <%= yield %>
-
-    
   </body>
 </html>

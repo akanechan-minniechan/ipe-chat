@@ -35,4 +35,13 @@ header {
     }
     }
 }
+.flash {
+    background-color: #FF99FF;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+}
 

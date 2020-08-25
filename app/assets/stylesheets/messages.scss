@@ -17,35 +17,20 @@
             margin-top: 30px;
             display: flex;
         justify-content: space-between;
-
-
-
             div {
-               
-                p {
-                    /* ユーザー名 */
+                 p { /* ユーザー名 */
                     SPAN {/* 投稿日時 */
-
-                    }
-
+                        font-size: 14px;
+                         }
+                   }
                 }
-                p {/* 本文 */
-
-                }
-            
-            }
             div {
                 ul {
-
-                    li {
-                
-                        
+                  li {
                             margin: 0.4em;
                             background-color: $sub-color;
                             border-radius: 5px;    /* 角丸 */
-                          
-                            a {
-                                
+                             a {
                                 padding: .7em 2em;    /* 内側余白　.7em 2emは、上下・左右の順に指定 */
                                 color: $main-color;    /* フォントの色 */
                                 font-weight: bold;    /* フォントを太字 */
@@ -56,17 +41,10 @@
                             &:hover {
                                 opacity: 0.7;
                                     }
-                            
-                        }
-                    }
-                    
-                
-                        
-                      
-                    
+                      }
+                    }                       
                 }
-
-        }
+                }
         
         } 
     
@@ -76,18 +54,16 @@
         padding: 20px;
         background-color: 	#FFBBFF;
         input[type="text"]{
-            width:70%
-        
-        }
+                          width:70%
+                          }
         input[type="submit"]{padding: .7em 0em;    /* 内側余白　.7em 2emは、上下・左右の順に指定 */
             color: $main-color;    /* フォントの色 */
             font-weight: bold;    /* フォントを太字 */
             text-decoration: none;    /* アンダーライン無効化 */
-            width: 10%;    /* 横幅を親要素いっぱいに広げる */
-           
-        }
+            width: 10%;    /* 横幅を親要素いっぱいに広げる */ 
+                           }
         
-    }
+                }
 
 }
     

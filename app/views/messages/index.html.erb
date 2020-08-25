@@ -18,10 +18,10 @@
                 <div class="message-right">
                  <ul>
                   <li>
-                    <a href="#">edit</a>
+                    <%= link_to "edit", messages_edit_path(message.id) %>
                   </li>
                   <li>
-                    <a href="#">delete</a>
+                    <a href="messages/<%= message.id %>/delete/">delete</a>
                   </li>
                  </ul>
             
@@ -38,11 +38,11 @@
             </div>
         </div>     
  
-    <div class="chat-form">
-        <form>  
-            <input id="chat-form" type="text">
-            <input type="submit" value="SEND">
-        </form>
+     <div class="chat-form">
+        <%= form_with model: @message, url: messages_create_path, local: true do |f| %>
+            <%= f.text_field :content, id: "chat-form" %>
+            <%= f.submit "SEND" %>
+        <% end %>
     </div>
 </div>
 
